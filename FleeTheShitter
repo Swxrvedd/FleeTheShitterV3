@@ -1,15 +1,15 @@
 local Mercury = loadstring(game:HttpGet("https://raw.githubusercontent.com/deeeity/mercury-lib/master/src.lua"))()
 
 local GUI = Mercury:Create{
-    Name = "Flee The Shitter V3.2",
+    Name = "Flee The Shitter V3.3",
     Size = UDim2.fromOffset(600, 400),
     Theme = Mercury.Themes.Dark,
     Link = "Swxrves flee the facility shitter"
 }
 
 GUI:Notification{
-	Title = "Update:",
-	Text = "Added Player Stuff WalkSpeed JumpPower Noclip FixCam, Fixed Lag on ESP and on others ,Add on discord for suggestions discord: $ SWXRVE#1591",
+	Title = "Update 25/02/23:",
+	Text = "Added Infinite Yield Optimized ESP, Fixed lag when using Invisible, Add on discord for suggestions discord: $ SWXRVE#1591",
 	Duration = 5,
 	Callback = function() end
 }
@@ -27,7 +27,7 @@ local Tab6 = GUI:Tab{
 }
 
 Tab6:Button{
-	Name = "Respawn",
+	Name = "Reset Character",
 	Description = nil,
 	Callback = function()
 local plr = game.Players.LocalPlayer
@@ -36,7 +36,7 @@ plr.Character:Destroy()
 }
 
 Tab6:Button{
-	Name = "FixCam",
+	Name = "Fix Cam (Basically third person beast)",
 	Description = nil,
 	Callback = function()
 local player = game.Players.LocalPlayer
@@ -51,7 +51,7 @@ local player = game.Players.LocalPlayer
 }
 
 Tab6:Slider{
-	Name = "WalkSpeed",
+	Name = "Speed",
 	Default = 50,
 	Min = 0,
 	Max = 100,
@@ -61,7 +61,7 @@ Tab6:Slider{
 }
 
 Tab6:Slider{
-	Name = "JumpPower",
+	Name = "JumpBoost",
 	Default = 50,
 	Min = 0,
 	Max = 100,
@@ -71,7 +71,7 @@ Tab6:Slider{
 }
 
 Tab6:Toggle{
-	Name = "Noclip (Must Bypass Anti Cheat)",
+	Name = "Noclip (Must Bypass Anti Cheat or you will be kicked)",
 	StartingState = false,
 	Description = nil,
 	Callback = function(state)
@@ -90,7 +90,7 @@ end
 }
 
 Tab6:Toggle{
-	Name = "HitBox",
+	Name = "Expand Hitboxs (Works sometimes)",
 	StartingState = false,
 	Description = nil,
 	Callback = function(state)
@@ -122,7 +122,7 @@ local Tab = GUI:Tab{
 }
 
 Tab:Toggle{
-	Name = "Player ESP",
+	Name = "Player Outlines",
 	StartingState = false,
 	Description = nil,
 	Callback = function(state)
@@ -242,7 +242,7 @@ end
 }
 
 Tab:Toggle{
-	Name = "Door ESP",
+	Name = "Door Outlines",
 	StartingState = false,
 	Description = nil,
 	Callback = function(state)
@@ -344,7 +344,7 @@ end
 }
 
 Tab:Toggle{
-	Name = "Computer ESP",
+	Name = "Computer Outlines",
 	StartingState = false,
 	Description = nil,
 	Callback = function(state)
@@ -394,7 +394,7 @@ end
 }
 
 Tab:Toggle{
-	Name = "FreezePod ESP",
+	Name = "FreezePod Outlines",
 	StartingState = false,
 	Description = nil,
 	Callback = function(state)
@@ -418,6 +418,13 @@ end
 	    end
 }
 
+Tab:Button{
+	Name = "Optimized Esp",
+	Description = nil,
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Swxrvedd/Scripts/main/optimized%20esp%20(not%20by%20me)"))()
+	    end
+}
 
 
 local Tab2 = GUI:Tab{
@@ -425,7 +432,7 @@ local Tab2 = GUI:Tab{
 	Icon = "rbxassetid://8569322835"
 }
 Tab2:Button{
-	Name = "Inf Stamina",
+	Name = "Infinite Stamina",
 	Description = nil,
 	Callback = function()
 if game.Players.LocalPlayer.TempPlayerStatsModule.IsBeast.Value == true then
@@ -456,7 +463,7 @@ end
 }
 
 Tab2:Button{
-	Name = "No Slow",
+	Name = "No Slowdown",
 	Description = nil,
 	Callback = function()
 if game.Players.LocalPlayer.TempPlayerStatsModule.IsBeast.Value == true then
@@ -475,7 +482,7 @@ end
 }
 
 Tab2:Button{
-	Name = "Enable Crawl",
+	Name = "Enable Crawling",
 	Description = nil,
 	Callback = function()
 if game.Players.LocalPlayer.TempPlayerStatsModule.IsBeast.Value == true then
@@ -492,7 +499,7 @@ end
 }
 
 Tab2:Button{
-	Name = "Remove Sounds and Glow",
+	Name = "Remove Chase Sound And Glow",
 	Description = nil,
 	Callback = function()
 if game.Players.LocalPlayer.TempPlayerStatsModule.IsBeast.Value == true then
@@ -519,7 +526,7 @@ end
 }
 
 Tab2:Button{
-	Name = "Bug Game Forever",
+	Name = "Break The Server",
 	Description = nil,
 	Callback = function()
 if game.Players.LocalPlayer.TempPlayerStatsModule.IsBeast.Value == true then
@@ -536,7 +543,7 @@ end
 }
 
 Tab2:Toggle{
-	Name = "Auto tie",
+	Name = "Auto Rope",
 	StartingState = false,
 	Description = nil,
 	Callback = function(state)
@@ -597,7 +604,7 @@ local Tab3 = GUI:Tab{
 	Icon = "rbxassetid://8569322835"
 }
 Tab3:Button{
-	Name = "Q to sprint forever",
+	Name = "Q to sprint",
 	Description = nil,
 	Callback = function()
 game.UserInputService.InputBegan:Connect(function(key)
@@ -619,7 +626,7 @@ end)
 }
 
 Tab3:Button{
-	Name = "No error on hack",
+	Name = "No error on minigame",
 	Description = nil,
 	Callback = function()
 spawn(function()
@@ -631,7 +638,7 @@ end)
 }
 
 local Tab4 = GUI:Tab{
-	Name = "Tp to pcs",
+	Name = "Teleport to pcs",
 	Icon = "rbxassetid://8569322835"
 }
 
@@ -677,7 +684,7 @@ c.Parent = game.workspace
 }
 
 local MyDropdown = Tab4:Dropdown{
-	Name = "Pcs (Must bypass anti cheat)",
+	Name = "Pc Teleports Bypass Anticheat First",
 	StartingText = "Select...",
 	Description = nil,
 	Items = {
@@ -791,7 +798,7 @@ end
 }
 
 Tab4:Button{
-	Name = "Visible and Invisible (Must bypass anti cheat Keybind: f)",
+	Name = "Visible and Invisible (Bypass Anticheat Keybind:F)",
 	Description = nil,
 	Callback = function()
 local Global = getgenv and getgenv()
@@ -1047,7 +1054,7 @@ local Tab5 = GUI:Tab{
 }
 
 Tab5:Button{
-	Name = "Close trade GUI",
+	Name = "Close trade GUI (Just closes the trading menu)",
 	Description = nil,
 	Callback = function()
 if game.PlaceId == 1738581510 then
@@ -1091,7 +1098,7 @@ end
 }
 
 Tab5:Button{
-	Name = "Inf Credits (Only works on Bundles)",
+	Name = "Inf Credits (Works on bundles)",
 	Description = nil,
 	Callback = function()
 	    print("This only works on bundles")
@@ -1110,7 +1117,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Swxrvedd/Scripts/main
 }
 
 local MyDropdown = Tab5:Dropdown{
-	Name = "Buy unavailable bundles (go to shop to buy it)",
+	Name = "Buy unavailable bundles (Go to shop and click buy)",
 	StartingText = "Select...",
 	Description = nil,
 	Items = {
