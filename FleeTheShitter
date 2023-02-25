@@ -665,6 +665,17 @@ local character = game.Players.LocalPlayer.Character
 	    end
 }
 
+Tab4:Button{
+	Name = "Bypass Anti Cheat V2 (Can't interact)",
+	Description = nil,
+	Callback = function()
+local c = game.Players.LocalPlayer.Character
+c.Parent = nil
+c.HumanoidRootPart:Destroy()
+c.Parent = game.workspace
+	    end
+}
+
 local MyDropdown = Tab4:Dropdown{
 	Name = "Pcs (Must bypass anti cheat)",
 	StartingText = "Select...",
@@ -1048,6 +1059,7 @@ GUI:Notification{
 	Duration = 5,
 	Callback = function() end
 }
+
 else
 GUI:Notification{
 	Title = "Alert!",
@@ -1084,8 +1096,16 @@ Tab5:Button{
 	Callback = function()
 	    print("This only works on bundles")
 while wait() do
-game:GetService("Players").LocalPlayer.SavedPlayerStatsModule.Credits.Value = 10000000000
+game:GetService("Players").LocalPlayer.SavedPlayerStatsModule.Credits.Value = 6969696969
 end
+	    end
+}
+
+Tab5:Button{
+	Name = "Infinite Yield",
+	Description = nil,
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Swxrvedd/Scripts/main/IY"))()
 	    end
 }
 
