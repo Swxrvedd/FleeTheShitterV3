@@ -9,7 +9,7 @@ local GUI = Mercury:Create{
 
 GUI:Notification{
 	Title = "Update 25/02/23:",
-	Text = "Added Infinite Yield Optimized ESP, Fixed lag when using Invisible, Add on discord for suggestions discord: $ SWXRVE#1591",
+	Text = "Added Infinite Yield, Optimized ESP And a new anticheat, Fixed lag when using Invisible, Add on discord for suggestions discord: $ SWXRVE#1591",
 	Duration = 5,
 	Callback = function() end
 }
